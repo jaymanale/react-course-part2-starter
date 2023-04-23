@@ -18,6 +18,7 @@ const useTodos = () => {
   return useQuery<Todo[], Error>({
     queryKey: ["todos"], // Key to store in cache
     queryFn: fetchTodos, // Actual backend call to fetch call which will return actual data
+    staleTime: 10 * 1000, // 10 Seconds - How long data is consider fresh ?
   });
 };
 
