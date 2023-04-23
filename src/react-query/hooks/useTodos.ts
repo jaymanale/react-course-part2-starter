@@ -17,7 +17,7 @@ const useTodos = () => {
 
   return useQuery<Todo[], Error>({
     queryKey: ["todos"], // Key to store in cache
-    queryFn: fetchTodos, // Actual backend call to fetch call
+    queryFn: fetchTodos, // Actual backend call to fetch call which will return actual data
   });
 };
 
